@@ -4,8 +4,7 @@
  */
 package searchingmodule.libraries;
 
-import searchingmodule.libraries.dblpPackage.DBConnection;
-import searchingmodule.libraries.dblpPackage.Parser;
+import searchingmodule.libraries.dblpPackage.DBLPSearch;
 
 /**
  *
@@ -13,19 +12,19 @@ import searchingmodule.libraries.dblpPackage.Parser;
  */
 public class DBLP extends Library implements Runnable {
 
-    String author;
-    String article;
-    String year;
-
-    public DBLP(String author, String article, String year) {
+    private String author;
+    private String article;
+    private String uri;
+    
+    public DBLP(String author, String article, String uri) {
         System.out.println("DBLP Search");
         this.author = author;
         this.article = article;
-        this.year = year;
+        this.uri = uri;
     }
 
     @Override
     public void run() {
-        Parser p = new Parser("http://dblp.uni-trier.de/xml/dblp.xml", this.author, this.article, this.year); 
+        DBLPSearch s = new DBLPSearch(author, article, uri);
     }
 }

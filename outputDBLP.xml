@@ -1,0 +1,41 @@
+<site name="dblp">
+<book>
+<title>Programming PHP - creating dynamic web pages: covers PHP 5 (2. ed.).</title>
+<authors>
+<author>Rasmus Lerdorf</author>
+<author>Kevin Tatroe</author>
+<author>Peter B. MacIntyre</author>
+</authors>
+<venue>O'Reilly 2006</venue>
+<year>2006</year>
+<url>http://www.oreilly.de/catalog/progphp2/index.html</url>
+</book>
+<book>
+<title>PHP - pocket reference: creating dynamic web pages: covers PHP 4 (2. ed).</title>
+<authors>
+<author>Rasmus Lerdorf</author>
+</authors>
+<venue>O'Reilly 2002</venue>
+<year>2002</year>
+<url>http://www.oreilly.de/catalog/phppr2/</url>
+</book>
+<book>
+<title>Programming PHP - creating dynamic web pages.</title>
+<authors>
+<author>Rasmus Lerdorf</author>
+<author>Kevin Tatroe</author>
+</authors>
+<venue>O'Reilly 2002</venue>
+<year>2002</year>
+<url>http://www.oreilly.de/catalog/progphp/index.html</url>
+</book>
+<book>
+<title>PHP pocket reference - web scripting.</title>
+<authors>
+<author>Rasmus Lerdorf</author>
+</authors>
+<venue>O'Reilly 2000</venue>
+<year>2000</year>
+<url></url>
+</book>
+</site>

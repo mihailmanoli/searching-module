@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<result>
+<query id="143290">ce:author:rasmus_lerdorf:* php</query>
+<status code="12">OK</status>
+<time unit="msecs">0.31</time>
+<completions total="1" computed="1" sent="1">
+<c sc="12" dc="4" oc="6" id="11270635">php</c>
+</completions>
+<suggestions computed="0" sent="0">
+</suggestions>
+<hits total="4" computed="4" sent="4" first="0">
+<hit score="6" id="2151059">
+<title><![CDATA[<dblp:authors><dblp:author>Rasmus Lerdorf</dblp:author><dblp:author>Kevin Tatroe</dblp:author><dblp:author>Peter B. MacIntyre</dblp:author></dblp:authors><dblp:title ee="http://www.oreilly.de/catalog/progphp2/index.html">Programming PHP - creating dynamic web pages: covers PHP 5 (2. ed.). </dblp:title><dblp:venue url="">O'Reilly 2006</dblp:venue><dblp:year>2006</dblp:year><dblp:type>book</dblp:type>]]></title>
+<url>http://www.dblp.org/rec/bibtex/books/daglib/0016126</url>
+</hit>
+<hit score="6" id="2539107">
+<title><![CDATA[<dblp:authors><dblp:author>Rasmus Lerdorf</dblp:author></dblp:authors><dblp:title ee="http://www.oreilly.de/catalog/phppr2/">PHP - pocket reference: creating dynamic web pages: covers PHP 4 (2. ed). </dblp:title><dblp:venue url="">O'Reilly 2002</dblp:venue><dblp:year>2002</dblp:year><dblp:type>book</dblp:type>]]></title>
+<url>http://www.dblp.org/rec/bibtex/books/daglib/0007607</url>
+</hit>
+<hit score="4" id="2541070">
+<title><![CDATA[<dblp:authors><dblp:author>Rasmus Lerdorf</dblp:author><dblp:author>Kevin Tatroe</dblp:author></dblp:authors><dblp:title ee="http://www.oreilly.de/catalog/progphp/index.html">Programming PHP - creating dynamic web pages. </dblp:title><dblp:venue url="">O'Reilly 2002</dblp:venue><dblp:year>2002</dblp:year><dblp:type>book</dblp:type>]]></title>
+<url>http://www.dblp.org/rec/bibtex/books/daglib/0006223</url>
+</hit>
+<hit score="4" id="2659597">
+<title><![CDATA[<dblp:authors><dblp:author>Rasmus Lerdorf</dblp:author></dblp:authors><dblp:title ee="">PHP pocket reference - web scripting. </dblp:title><dblp:venue url="">O'Reilly 2000</dblp:venue><dblp:year>2000</dblp:year><dblp:type>book</dblp:type>]]></title>
+<url>http://www.dblp.org/rec/bibtex/books/daglib/0000757</url>
+</hit>
+</hits>
+</result>

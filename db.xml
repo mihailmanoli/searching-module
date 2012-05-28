@@ -1,7 +1,0 @@
-<connection>
-	<host>localhost</host>
-	<port>3306</port>
-	<dbname>dblpbd</dbname>
-	<username>root</username>
-	<pass></pass>
-</connection>

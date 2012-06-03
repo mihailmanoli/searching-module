@@ -4,19 +4,28 @@
  */
 package searchingmodule.libraries;
 
+import searchingmodule.libraries.citeSeerx.CiteSeerx;
+
 /**
  *
  * @author MManoli
  */
 public class CiteSeer extends Library implements Runnable{
-
-    public CiteSeer() {
+    private String author;
+    private String article;
+    private String uri;
+    
+    public CiteSeer(String author, String article, String uri) {
         System.out.println("CiteSeer Search");
+        this.author = author;
+        this.article = article;
+        this.uri = uri;
     }
 
     @Override
     public void run() {
         System.out.println("CiteSeer Implementation");
+        CiteSeerx c = new CiteSeerx(uri, article, author);
     }
     
 }

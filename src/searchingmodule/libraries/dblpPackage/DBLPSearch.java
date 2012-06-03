@@ -2,6 +2,7 @@ package searchingmodule.libraries.dblpPackage;
 
 import java.net.*;
 import java.io.*;
+import java.util.StringTokenizer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.xml.parsers.ParserConfigurationException;
@@ -26,16 +27,28 @@ public class DBLPSearch {
     
     public void searchDBLPData() {
         try { 
-            String QAuthor = this.authorName.toLowerCase().replace(" ", "_");
+            
+            StringTokenizer st1 = new StringTokenizer(this.authorName);
+            String queryAuthor = "";
+            int it = 0;
+            while (st1.hasMoreTokens()) {
+                 queryAuthor += st1.nextToken(";");
+                 it++;
+                 if(it<=st1.countTokens())
+                 queryAuthor +=" ";
+            }
+            String QAuthor = queryAuthor.toLowerCase().replace(",.", "");
+            QAuthor = QAuthor.replace("ă", "a").replace("î", "i").replace("ș", "s").replace("ț", "t").replace("â", "a").replace(" ", "%20");
+            System.out.println("-----------------"+QAuthor);
             String QArticle = this.article.toLowerCase().replaceAll("[^a-zA-Z0-9 ]", "");
             QArticle= QArticle.replace(" ", "%20");
              URL url = null;
             if(this.authorName.equals("")){
                 url = new URL("http://www.dblp.org/search/api/?q="+QArticle+"&h=1000&c=4&f=0&format=xml");
             }else if(this.article.equals("")){
-                url = new URL("http://www.dblp.org/search/api/?q=ce:author:"+QAuthor+":*&h=1000&c=4&f=0&format=xml");
+                url = new URL("http://www.dblp.org/search/api/?q="+QAuthor+"&h=1000&c=4&f=0&format=xml");
             } else
-                url = new URL("http://www.dblp.org/search/api/?q=ce:author:"+QAuthor+":*%20"+QArticle+"&h=1000&c=4&f=0&format=xml");
+                url = new URL("http://www.dblp.org/search/api/?q="+QAuthor+"%20"+QArticle+"&h=1000&c=4&f=0&format=xml");
             url.openConnection();
             System.out.println(url);
             InputStream reader = url.openStream();

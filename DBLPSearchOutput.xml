@@ -1,29 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <result>
-<query id="143290">ce:author:rasmus_lerdorf:* php</query>
+<query id="190660">mihai alex diana trandabat</query>
 <status code="12">OK</status>
-<time unit="msecs">0.31</time>
+<time unit="msecs">14.23</time>
 <completions total="1" computed="1" sent="1">
-<c sc="12" dc="4" oc="6" id="11270635">php</c>
+<c sc="1800" dc="9" oc="18" id="11425532">trandabat</c>
 </completions>
 <suggestions computed="0" sent="0">
 </suggestions>
-<hits total="4" computed="4" sent="4" first="0">
-<hit score="6" id="2151059">
-<title><![CDATA[<dblp:authors><dblp:author>Rasmus Lerdorf</dblp:author><dblp:author>Kevin Tatroe</dblp:author><dblp:author>Peter B. MacIntyre</dblp:author></dblp:authors><dblp:title ee="http://www.oreilly.de/catalog/progphp2/index.html">Programming PHP - creating dynamic web pages: covers PHP 5 (2. ed.). </dblp:title><dblp:venue url="">O'Reilly 2006</dblp:venue><dblp:year>2006</dblp:year><dblp:type>book</dblp:type>]]></title>
-<url>http://www.dblp.org/rec/bibtex/books/daglib/0016126</url>
+<hits total="9" computed="9" sent="9" first="0">
+<hit score="700" id="1910169">
+<title><![CDATA[<dblp:authors><dblp:author>Adrian Iftene</dblp:author><dblp:author>Diana Trandabat</dblp:author><dblp:author>Ionut Pistol</dblp:author><dblp:author>Mihai Alex Moruz</dblp:author><dblp:author>Alexandra Balahur</dblp:author><dblp:author>Diana Cotelea</dblp:author><dblp:author>Iustin Dornescu</dblp:author><dblp:author>Iuliana Draghici</dblp:author><dblp:author>Dan Cristea</dblp:author></dblp:authors><dblp:title ee="http://dx.doi.org/10.1007/978-3-540-85760-0_42">UAIC Romanian QA System for QA@CLEF. </dblp:title><dblp:venue url="db/conf/clef/clef2007.html#IfteneTPMBCDDC07">CLEF 2007:336-343</dblp:venue><dblp:year>2007</dblp:year><dblp:type>inproceedings</dblp:type>]]></title>
+<url>http://www.dblp.org/rec/bibtex/conf/clef/IfteneTPMBCDDC07</url>
 </hit>
-<hit score="6" id="2539107">
-<title><![CDATA[<dblp:authors><dblp:author>Rasmus Lerdorf</dblp:author></dblp:authors><dblp:title ee="http://www.oreilly.de/catalog/phppr2/">PHP - pocket reference: creating dynamic web pages: covers PHP 4 (2. ed). </dblp:title><dblp:venue url="">O'Reilly 2002</dblp:venue><dblp:year>2002</dblp:year><dblp:type>book</dblp:type>]]></title>
-<url>http://www.dblp.org/rec/bibtex/books/daglib/0007607</url>
+<hit score="600" id="1197309">
+<title><![CDATA[<dblp:authors><dblp:author>Adrian Iftene</dblp:author><dblp:author>Alexandru-Lucian Gînsca</dblp:author><dblp:author>Mihai Alex Moruz</dblp:author><dblp:author>Diana Trandabat</dblp:author><dblp:author>Maria Husarciuc</dblp:author></dblp:authors><dblp:title ee="http://clef2011.org/resources/proceedings/Iftene_QA4MRE_Clef2011.pdf">Question Answering for Machine Reading Evaluation on Romanian and English Languages. </dblp:title><dblp:venue url="db/conf/clef/clef2011w.html#IfteneGMTH11">CLEF (Notebook Papers/Labs/Workshop) 2011</dblp:venue><dblp:year>2011</dblp:year><dblp:type>inproceedings</dblp:type>]]></title>
+<url>http://www.dblp.org/rec/bibtex/conf/clef/IfteneGMTH11</url>
 </hit>
-<hit score="4" id="2541070">
-<title><![CDATA[<dblp:authors><dblp:author>Rasmus Lerdorf</dblp:author><dblp:author>Kevin Tatroe</dblp:author></dblp:authors><dblp:title ee="http://www.oreilly.de/catalog/progphp/index.html">Programming PHP - creating dynamic web pages. </dblp:title><dblp:venue url="">O'Reilly 2002</dblp:venue><dblp:year>2002</dblp:year><dblp:type>book</dblp:type>]]></title>
-<url>http://www.dblp.org/rec/bibtex/books/daglib/0006223</url>
+<hit score="600" id="1383866">
+<title><![CDATA[<dblp:authors><dblp:author>Adrian Iftene</dblp:author><dblp:author>Diana Trandabat</dblp:author><dblp:author>Maria Husarciuc</dblp:author><dblp:author>Mihai Alex Moruz</dblp:author></dblp:authors><dblp:title ee="http://clef2010.org/resources/proceedings/clef2010labs_submission_22.pdf">Question Answering on Romanian, English and French Languages. </dblp:title><dblp:venue url="db/conf/clef/clef2010w.html#IfteneTHM10">CLEF (Notebook Papers/LABs/Workshops) 2010</dblp:venue><dblp:year>2010</dblp:year><dblp:type>inproceedings</dblp:type>]]></title>
+<url>http://www.dblp.org/rec/bibtex/conf/clef/IfteneTHM10</url>
 </hit>
-<hit score="4" id="2659597">
-<title><![CDATA[<dblp:authors><dblp:author>Rasmus Lerdorf</dblp:author></dblp:authors><dblp:title ee="">PHP pocket reference - web scripting. </dblp:title><dblp:venue url="">O'Reilly 2000</dblp:venue><dblp:year>2000</dblp:year><dblp:type>book</dblp:type>]]></title>
-<url>http://www.dblp.org/rec/bibtex/books/daglib/0000757</url>
+<hit score="600" id="1566868">
+<title><![CDATA[<dblp:authors><dblp:author>Adrian Iftene</dblp:author><dblp:author>Diana Trandabat</dblp:author><dblp:author>Mihai Alex Moruz</dblp:author><dblp:author>Ionut Pistol</dblp:author><dblp:author>Maria Husarciuc</dblp:author><dblp:author>Dan Cristea</dblp:author></dblp:authors><dblp:title ee="http://dx.doi.org/10.1007/978-3-642-15754-7_25">Question Answering on English and Romanian Languages. </dblp:title><dblp:venue url="db/conf/clef/clef2009.html#IfteneTMPHC09">CLEF 2009:229-236</dblp:venue><dblp:year>2009</dblp:year><dblp:type>inproceedings</dblp:type>]]></title>
+<url>http://www.dblp.org/rec/bibtex/conf/clef/IfteneTMPHC09</url>
+</hit>
+<hit score="600" id="1716119">
+<title><![CDATA[<dblp:authors><dblp:author>Neculai Curteanu</dblp:author><dblp:author>Diana Trandabat</dblp:author><dblp:author>Mihai Alex Moruz</dblp:author></dblp:authors><dblp:title ee="http://dx.doi.org/10.1007/978-3-642-04208-9_33">Expanding Topic-Focus Articulation with Boundary and Accent Assignment Rules for Romanian Sentence. </dblp:title><dblp:venue url="db/conf/tsd/tsd2009.html#CurteanuTM09">TSD 2009:226-233</dblp:venue><dblp:year>2009</dblp:year><dblp:type>inproceedings</dblp:type>]]></title>
+<url>http://www.dblp.org/rec/bibtex/conf/tsd/CurteanuTM09</url>
+</hit>
+<hit score="600" id="1747111">
+<title><![CDATA[<dblp:authors><dblp:author>Adrian Iftene</dblp:author><dblp:author>Diana Trandabat</dblp:author><dblp:author>Ionut Pistol</dblp:author><dblp:author>Mihai Alex Moruz</dblp:author><dblp:author>Maria Husarciuc</dblp:author><dblp:author>Dan Cristea</dblp:author></dblp:authors><dblp:title ee="http://dx.doi.org/10.1007/978-3-642-04447-2_45">UAIC Participation at QA@CLEF2008. </dblp:title><dblp:venue url="db/conf/clef/clef2008.html#IfteneTPMHC08">CLEF 2008:385-392</dblp:venue><dblp:year>2008</dblp:year><dblp:type>inproceedings</dblp:type>]]></title>
+<url>http://www.dblp.org/rec/bibtex/conf/clef/IfteneTPMHC08</url>
+</hit>
+<hit score="600" id="2031102">
+<title><![CDATA[<dblp:authors><dblp:author>Neculai Curteanu</dblp:author><dblp:author>Diana Trandabat</dblp:author><dblp:author>Mihai Alex Moruz</dblp:author></dblp:authors><dblp:title ee="http://dx.doi.org/10.1007/978-3-540-74628-7_67">Topic-Focus Articulation Algorithm on the Syntax-Prosody Interface of Romanian. </dblp:title><dblp:venue url="db/conf/tsd/tsd2007.html#CurteanuTM07">TSD 2007:516-523</dblp:venue><dblp:year>2007</dblp:year><dblp:type>inproceedings</dblp:type>]]></title>
+<url>http://www.dblp.org/rec/bibtex/conf/tsd/CurteanuTM07</url>
+</hit>
+<hit score="600" id="2031493">
+<title><![CDATA[<dblp:authors><dblp:author>Neculai Curteanu</dblp:author><dblp:author>Diana Trandabat</dblp:author><dblp:author>Mihai Alex Moruz</dblp:author></dblp:authors><dblp:title ee="http://www.math.md/publications/csjm/issues/v15-n2/8652/">Functional FX-bar Projections of the (Romanian) Verbal Group and Sub-Groups on the Syntactic-Semantic Interface. </dblp:title><dblp:venue url="db/journals/csjm/csjm15.html#CurteanuTM07">The Computer Science Journal of Moldova (CSJM) 15(2):123-152 (2007)</dblp:venue><dblp:year>2007</dblp:year><dblp:type>article</dblp:type>]]></title>
+<url>http://www.dblp.org/rec/bibtex/journals/csjm/CurteanuTM07</url>
+</hit>
+<hit score="600" id="2059836">
+<title><![CDATA[<dblp:authors><dblp:author>Georgiana Puscasu</dblp:author><dblp:author>Adrian Iftene</dblp:author><dblp:author>Ionut Pistol</dblp:author><dblp:author>Diana Trandabat</dblp:author><dblp:author>Dan Tufis</dblp:author><dblp:author>Alin Ceausu</dblp:author><dblp:author>Dan Stefanescu</dblp:author><dblp:author>Radu Ion</dblp:author><dblp:author>Iustin Dornescu</dblp:author><dblp:author>Mihai Alex Moruz</dblp:author><dblp:author>Dan Cristea</dblp:author></dblp:authors><dblp:title ee="http://dx.doi.org/10.1007/978-3-540-74999-8_46">Cross-Lingual Romanian to English Question Answering at CLEF 2006. </dblp:title><dblp:venue url="db/conf/clef/clef2006.html#PuscasuIPTTCSIDMC06">CLEF 2006:385-394</dblp:venue><dblp:year>2006</dblp:year><dblp:type>inproceedings</dblp:type>]]></title>
+<url>http://www.dblp.org/rec/bibtex/conf/clef/PuscasuIPTTCSIDMC06</url>
 </hit>
 </hits>
 </result>

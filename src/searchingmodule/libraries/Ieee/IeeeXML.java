@@ -53,7 +53,7 @@ public class IeeeXML {
              * Setup a buffered file writer to write out what we read from the
              * website.
              */
-            FileOutputStream writer = new FileOutputStream("IEEESearchOutput.xml");
+            FileOutputStream writer = new FileOutputStream("brutIeee.xml");
             byte[] buffer = new byte[153600];
             int totalBytesRead = 0;
             int bytesRead = 0;
@@ -68,14 +68,14 @@ public class IeeeXML {
 
             System.out.println("Done. " + (new Integer(totalBytesRead).toString()) + " bytes read (" + (new Long(endTime - startTime).toString()) + " millseconds).\n");
             writer.close();
-            reader.close();
+            reader.close();          
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        new ParseIeee("IEEESearchOutput.xml", outFileName);
+        new ParseIeee("brutIeee.xml", outFileName);
     }
 
     private String formatInput(String input) {

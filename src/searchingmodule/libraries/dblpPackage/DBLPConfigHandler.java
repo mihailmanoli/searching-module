@@ -78,20 +78,16 @@ public class DBLPConfigHandler extends DefaultHandler {
     public void endElement(String uri, String localName, String qName) throws SAXException {
         if (qName.equalsIgnoreCase("title")) {
             try {
+                articleStr = articleStr.replace("<>'\"", " ");
                 String articleParser = "<?xml version=\"1.0\"?><wrapper>";
                 articleParser = articleParser.concat(articleStr);
                 articleParser = articleParser.concat("</wrapper>");
-                //  DBLPXML dblxml = new DBLPXML(articleParser, this.uri);
-                articleParser.replace("&", " and ");
-                System.out.println(articleParser);
+                articleParser=articleParser.replace("&", " and ");
                 Document doc = docBuilder.parse(new InputSource(new StringReader(articleParser)));
 
                 // normalize text representation
                 doc.getDocumentElement().normalize();
-                System.out.println("Root element of the doc is " + doc.getDocumentElement().getNodeName());
                 NodeList listOfBooks = doc.getElementsByTagName("wrapper");
-                int totalPersons = listOfBooks.getLength();
-                System.out.println("Total no of pubications/articles : " + totalPersons);
                 for (int s = 0; s < listOfBooks.getLength(); s++) {
                     out.write("<book>\n".getBytes("UTF-8"));
                     Node firstNode = listOfBooks.item(s);

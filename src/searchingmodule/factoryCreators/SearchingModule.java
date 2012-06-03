@@ -21,14 +21,13 @@ public class SearchingModule {
         String citeSeerOutput = "outputCiteSeer.xml";
         String worldCatOutput = "outputWorldCat.xml";
         String dblpOutput = "outputDBLP.xml";
-        String author = "Rasmus Lerdorf";
-        String article = "PHP";
+        String author = "Mihai Alex;Diana Trandabat";
+        String article = "";
+        
         IEEE ieeeSearch = new IEEE(author, article, ieeeOutput);
-        
-        CiteSeer citeSeerSearch = new CiteSeer();
-        GoogleScholar googleScholarSearch = new GoogleScholar();
-        
+        CiteSeer citeSeerSearch = new CiteSeer(author, article, citeSeerOutput);
         WorldCat worldCatSearch = new WorldCat(author, article, worldCatOutput);
+        
         DBLP dblpSearch = new DBLP(author, article, dblpOutput);
 
         /*
@@ -37,8 +36,7 @@ public class SearchingModule {
 
         new Thread(ieeeSearch).start();
         new Thread(citeSeerSearch).start();
-        new Thread(googleScholarSearch).start();
         new Thread(worldCatSearch).start();
-        new Thread(dblpSearch).start();
+ //       new Thread(dblpSearch).start();
     }
 }

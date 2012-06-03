@@ -54,8 +54,8 @@ public class WorldCatXML {
                     Element titluElement = (Element) titleList.item(0);
 
                     NodeList ttlList = titluElement.getChildNodes();
-                    out.write("<title>" + ((Node) ttlList.item(0)).getNodeValue().trim().replace("&", "and") + "</title>\n");
-
+//                    out.write("<title>" + ((Node) ttlList.item(0)).getNodeValue().trim().replace("&", "and") + "</title>\n");
+                    out.append("<title>" + ((Node)ttlList.item(0)).getNodeValue().trim().replace("&", "&amp;").replace("\"","&quot;").replace("\'","&apos;").replace("<","&lt;").replace(">","&gt;") +"</title>\n");
                     try {
                         NodeList author = elem.getElementsByTagName("name");
                         Element nameElement = (Element) author.item(0);

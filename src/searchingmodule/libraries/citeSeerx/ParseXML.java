@@ -2,17 +2,16 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package searchingmodule.libraries.Ieee;
+package searchingmodule.libraries.citeSeerx;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
+import org.w3c.dom.*;
+
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.DocumentBuilder;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 
@@ -20,9 +19,9 @@ import org.xml.sax.SAXParseException;
  *
  * @author Phoenix
  */
-public class ParseIeee {
+public class ParseXML {
 
-    public ParseIeee(String xmlFile, String outFileName) {
+    public ParseXML(String xmlFile, String outFileName) {
         try {
 
             DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
@@ -30,12 +29,11 @@ public class ParseIeee {
             Document doc = docBuilder.parse(new File(xmlFile));
 
             // normalize text representation
-            doc.getDocumentElement().normalize();
             NodeList listOfBooks = null;
             try {
-                listOfBooks = doc.getElementsByTagName("document");
-                int totalBooks = listOfBooks.getLength();
-                System.out.println("Total no of pubications/articles : " + totalBooks);
+                listOfBooks = doc.getElementsByTagName("record");
+                int totalPersons = listOfBooks.getLength();
+                System.out.println("Total no of pubications/articles : " + totalPersons);
             } catch (NullPointerException e) {
             }
 
@@ -43,19 +41,20 @@ public class ParseIeee {
             out = new FileOutputStream(outFileName);
             String line = new String();
 
-            line = "<site name=\"ieeexplore\">\n";
+            line = "<site name=\"citeseerx\">\n";
             out.write(line.getBytes("UTF-8"));
 
             for (int s = 0; s < listOfBooks.getLength(); s++) {
                 out.write("<book>\n".getBytes("UTF-8"));
-                Node firstNode = listOfBooks.item(s);
-                if (firstNode.getNodeType() == Node.ELEMENT_NODE) {
 
-                    Element firstElement = (Element) firstNode;
+                Node title = listOfBooks.item(s);
+                if (title.getNodeType() == Node.ELEMENT_NODE) {
+
+                    Element firstElement = (Element) title;
 
                     //-------
                     try {
-                        NodeList firstNameList = firstElement.getElementsByTagName("title");
+                        NodeList firstNameList = firstElement.getElementsByTagName("dc:title");
                         Element firstNameElement = (Element) firstNameList.item(0);
                         NodeList textFNList = firstNameElement.getChildNodes();
                         line = "<title>" + replaceSpecialCharacters(((Node) textFNList.item(0)).getNodeValue().trim()) + "</title>\n";
@@ -64,14 +63,12 @@ public class ParseIeee {
                     }
 
                     try {
-                        NodeList author = firstElement.getElementsByTagName("authors");
-                        Element lastElement = (Element) author.item(0);
-                        NodeList textLNList = lastElement.getChildNodes();
-                        String au = ((Node) textLNList.item(0)).getNodeValue().trim();
-                        String[] authors = au.split(";");
                         out.write("<authors>\n".getBytes("UTF-8"));
-                        for (int j = 0; j < authors.length; j++) {
-                            line = "<author>" + replaceSpecialCharacters(authors[j]) + "</author>\n";
+                        NodeList author = firstElement.getElementsByTagName("dc:creator");
+                        for (int i = 0; i < author.getLength(); i++) {
+                            Element lastElement = (Element) author.item(i);
+                            NodeList textLNList = lastElement.getChildNodes();
+                            line = "<author>" + replaceSpecialCharacters(((Node) textLNList.item(0)).getNodeValue().trim()) + "</author>\n";
                             out.write(line.getBytes("UTF-8"));
                         }
                         out.write("</authors>\n".getBytes("UTF-8"));
@@ -79,59 +76,49 @@ public class ParseIeee {
                     }
 
                     try {
-                        NodeList pyList = firstElement.getElementsByTagName("py");
-                        Element pyElement = (Element) pyList.item(0);
-
-                        NodeList url = pyElement.getChildNodes();
-                        line = "<pubyear>" + replaceSpecialCharacters(((Node) url.item(0)).getNodeValue().trim()) + "</pubyear>\n";
-                        out.write(line.getBytes("UTF-8"));
-                    } catch (NullPointerException e) {
-                    }
-
-                    try {
-                        NodeList urlList = firstElement.getElementsByTagName("mdurl");
+                        NodeList urlList = firstElement.getElementsByTagName("dc:identifier");
                         Element urlElement = (Element) urlList.item(0);
-
                         NodeList url = urlElement.getChildNodes();
-                        line = "<url>" + replaceSpecialCharacters(((Node) url.item(0)).getNodeValue().trim()) + "</url>\n";
+                        line = "<url>" + formatLink(replaceSpecialCharacters(((Node) url.item(0)).getNodeValue().trim())) + "</url>\n";
                         out.write(line.getBytes("UTF-8"));
                     } catch (NullPointerException e) {
                     }
-
+                    
                     try {
-                        NodeList affiliationsList = firstElement.getElementsByTagName("affiliations");
-                        Element affiliationsElement = (Element) affiliationsList.item(0);
-
-                        NodeList affiliations = affiliationsElement.getChildNodes();
-                        line = "<affiliations>" + replaceSpecialCharacters(((Node) affiliations.item(0)).getNodeValue().trim()) + "</affiliations>\n";
+                        NodeList languageList = firstElement.getElementsByTagName("dc:language");
+                        Element languageElement = (Element) languageList.item(0);
+                        NodeList language = languageElement.getChildNodes();
+                        line = "<language>" + formatLink(replaceSpecialCharacters(((Node) language.item(0)).getNodeValue().trim())) + "</language>\n";
                         out.write(line.getBytes("UTF-8"));
                     } catch (NullPointerException e) {
                     }
-
+                    
                     try {
-                        NodeList isbnList = firstElement.getElementsByTagName("isbn");
-                        Element isbnElement = (Element) isbnList.item(0);
-
-                        NodeList textIsbnList = isbnElement.getChildNodes();
-                        line = "<isbn>" + replaceSpecialCharacters(((Node) textIsbnList.item(0)).getNodeValue().trim()) + "</isbn>\n";
-                        out.write(line.getBytes("UTF-8"));
-                    } catch (NullPointerException e) {
-                    }
-
-                    try {
-                        NodeList doiList = firstElement.getElementsByTagName("doi");
+                        NodeList doiList = firstElement.getElementsByTagName("identifier");
                         Element doiElement = (Element) doiList.item(0);
-
-                        NodeList textdoiList = doiElement.getChildNodes();
-                        line = "<doi>" + replaceSpecialCharacters(((Node) textdoiList.item(0)).getNodeValue().trim()) + "</doi>\n";
+                        NodeList doiFNList = doiElement.getChildNodes();
+                        line = "<doi>" + formatLink(replaceSpecialCharacters(((Node) doiFNList.item(0)).getNodeValue().trim())) + "</doi>\n";
                         out.write(line.getBytes("UTF-8"));
+                    } catch (NullPointerException e) {
+                    }
+
+                    try {
+                        out.write("<subjects>\n".getBytes("UTF-8"));
+                        NodeList subject = firstElement.getElementsByTagName("dc:subject");
+                        for (int i = 0; i < subject.getLength(); i++) {
+                            Element subjectElement = (Element) subject.item(i);
+                            NodeList subjectLNList = subjectElement.getChildNodes();
+                            line = "<subject>" + replaceSpecialCharacters(((Node) subjectLNList.item(0)).getNodeValue().trim()) + "</subject>\n";
+                            out.write(line.getBytes("UTF-8"));
+                        }
+                        out.write("</subjects>\n".getBytes("UTF-8"));
                     } catch (NullPointerException e) {
                     }
 
                 }//end of if clause
 
                 out.write("</book>\n".getBytes("UTF-8"));
-            }
+            }//end of for loop with s var
             out.write("</site>".getBytes("UTF-8"));
             if (out != System.out) {
                 out.close();
@@ -150,9 +137,14 @@ public class ParseIeee {
             t.printStackTrace();
         }
 
-    }//end of ParseIeee
+    }//end of ParseXML
+    
+    private String formatLink(String str) {      
+        str = str.replace("citeseerx/", "");
+        return str;
+    }
 
-    private String replaceSpecialCharacters(String str) {        
+    private String replaceSpecialCharacters(String str) {
         if (str.contains("&")) {
             str = str.replace("&", "&amp;");
         }

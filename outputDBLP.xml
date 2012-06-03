@@ -1,41 +1,79 @@
 <site name="dblp">
 <book>
-<title>Programming PHP - creating dynamic web pages: covers PHP 5 (2. ed.).</title>
+<title>UAIC Romanian QA System for QA@CLEF.</title>
 <authors>
-<author>Rasmus Lerdorf</author>
-<author>Kevin Tatroe</author>
-<author>Peter B. MacIntyre</author>
+<author>Adrian Iftene</author>
+<author>Diana Trandabat</author>
+<author>Ionut Pistol</author>
+<author>Mihai Alex Moruz</author>
+<author>Alexandra Balahur</author>
+<author>Diana Cotelea</author>
+<author>Iustin Dornescu</author>
+<author>Iuliana Draghici</author>
+<author>Dan Cristea</author>
 </authors>
-<venue>O'Reilly 2006</venue>
-<year>2006</year>
-<url>http://www.oreilly.de/catalog/progphp2/index.html</url>
+<venue>CLEF 2007:336-343</venue>
+<year>2007</year>
+<url>http://dx.doi.org/10.1007/978-3-540-85760-0_42</url>
 </book>
 <book>
-<title>PHP - pocket reference: creating dynamic web pages: covers PHP 4 (2. ed).</title>
+<title>Question Answering for Machine Reading Evaluation on Romanian and English Languages.</title>
 <authors>
-<author>Rasmus Lerdorf</author>
+<author>Adrian Iftene</author>
+<author>Alexandru-Lucian Gînsca</author>
+<author>Mihai Alex Moruz</author>
+<author>Diana Trandabat</author>
+<author>Maria Husarciuc</author>
 </authors>
-<venue>O'Reilly 2002</venue>
-<year>2002</year>
-<url>http://www.oreilly.de/catalog/phppr2/</url>
+<venue>CLEF (Notebook Papers/Labs/Workshop) 2011</venue>
+<year>2011</year>
+<url>http://clef2011.org/resources/proceedings/Iftene_QA4MRE_Clef2011.pdf</url>
 </book>
 <book>
-<title>Programming PHP - creating dynamic web pages.</title>
+<title>Question Answering on English and Romanian Languages.</title>
 <authors>
-<author>Rasmus Lerdorf</author>
-<author>Kevin Tatroe</author>
+<author>Adrian Iftene</author>
+<author>Diana Trandabat</author>
+<author>Mihai Alex Moruz</author>
+<author>Ionut Pistol</author>
+<author>Maria Husarciuc</author>
+<author>Dan Cristea</author>
 </authors>
-<venue>O'Reilly 2002</venue>
-<year>2002</year>
-<url>http://www.oreilly.de/catalog/progphp/index.html</url>
+<venue>CLEF 2009:229-236</venue>
+<year>2009</year>
+<url>http://dx.doi.org/10.1007/978-3-642-15754-7_25</url>
 </book>
 <book>
-<title>PHP pocket reference - web scripting.</title>
+<title>Expanding Topic-Focus Articulation with Boundary and Accent Assignment Rules for Romanian Sentence.</title>
 <authors>
-<author>Rasmus Lerdorf</author>
+<author>Neculai Curteanu</author>
+<author>Diana Trandabat</author>
+<author>Mihai Alex Moruz</author>
 </authors>
-<venue>O'Reilly 2000</venue>
-<year>2000</year>
-<url></url>
+<venue>TSD 2009:226-233</venue>
+<year>2009</year>
+<url>http://dx.doi.org/10.1007/978-3-642-04208-9_33</url>
+</book>
+<book>
+<title>Topic-Focus Articulation Algorithm on the Syntax-Prosody Interface of Romanian.</title>
+<authors>
+<author>Neculai Curteanu</author>
+<author>Diana Trandabat</author>
+<author>Mihai Alex Moruz</author>
+</authors>
+<venue>TSD 2007:516-523</venue>
+<year>2007</year>
+<url>http://dx.doi.org/10.1007/978-3-540-74628-7_67</url>
+</book>
+<book>
+<title>Functional FX-bar Projections of the (Romanian) Verbal Group and Sub-Groups on the Syntactic-Semantic Interface.</title>
+<authors>
+<author>Neculai Curteanu</author>
+<author>Diana Trandabat</author>
+<author>Mihai Alex Moruz</author>
+</authors>
+<venue>The Computer Science Journal of Moldova (CSJM) 15(2):123-152 (2007)</venue>
+<year>2007</year>
+<url>http://www.math.md/publications/csjm/issues/v15-n2/8652/</url>
 </book>
 </site>
